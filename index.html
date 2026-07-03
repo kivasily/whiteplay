@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whiteplay Pocket OS</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(250, 250, 250, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s ease;
+  }
+
+  nav a:hover {
+    color: #888888;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 120px auto 60px auto;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #111111;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 40px 0;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  .author-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    margin-top: 60px;
+  }
+
+  a.link {
+    color: #0055cc;
+    text-decoration: none;
+  }
+
+  a.link:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#about">О проекте</a>
+  <a href="#specs">Спецификации</a>
+  <a href="#dev">Разработка</a>
+  <a href="#author">Об авторе</a>
+</nav>
+
+<div class="container">
+  <h1>Whiteplay Pocket OS</h1>
+  <div class="subtitle">Официальная проектная документация</div>
+
+  <div id="about">
+    <h2>1. Простое описание проекта</h2>
+    <p>Настоящий документ регламентирует процесс создания и разработки портативной вычислительной системы Whiteplay Pocket, а также специализированного программного обеспечения Whiteplay OS. Проект направлен на реализацию автономного устройства с кастомизируемым интерфейсом для запуска программного обеспечения и изучения архитектуры встраиваемых систем.</p>
+    <p>Whiteplay Pocket — это проект по созданию полноценной портативной игровой консоли и специализированной операционной системы для неё. Главная идея автора заключается в том, чтобы собрать с нуля полностью рабочее переносимое игровое устройство (по типу Nintendo Switch или PlayStation Vita), используя доступные электронные комплектующие.</p>
+    <h3>Аппаратная база</h3>
+    <p>Устройство проектируется как независимая игровая платформа. В качестве «сердца» консоли используется компактный вычислительный модуль Raspberry Pi Zero 2 W, за вывод изображения отвечает качественный 5-дюймовый IPS-экран, а элементы управления (кнопки и аналоговые стики) подключаются напрямую к плате. Все компоненты будут размещены в уникальном корпусе, разработанном специально для этого проекта.</p>
+    <h3>Собственная операционная система</h3>
+    <p>Главная особенность Whiteplay Pocket — это отказ от тяжелых готовых программ. Автор создает собственную операционную систему Whiteplay OS. Она базируется на специально облегченной версии Linux и пишется на языке C++ с графической библиотекой Raylib. Благодаря этому система будет запускаться за несколько секунд, работать плавно и тратить минимум заряда батареи.</p>
+    <h3>Игры и цифровой магазин</h3>
+    <p>Для консоли силами команды будут создаваться уникальные проекты — от простых пиксельных аркад до трехмерных гонок. Игры будут устанавливаться через собственный независимый магазин приложений, который связывает приставку с домашним сервером автора по беспроводной сети.</p>
+    <h3>Образовательная ценность</h3>
+    <p>Этот проект объединяет в себе конструирование железа, программирование и создание графики, позволяя участникам команды с нуля понять, как устроены современные гаджеты, и создать свое собственное уникальное устройство.</p>
+    <p>Перейдите по следующей ссылке, для получения информации о ролях в разработке: <a class="link" href="https://kivasily.github.io/whiteplay/simple-documentation.html">kivasily.github.io/whiteplay/simple-documentation.html</a></p>
+  </div>
+
+  <hr>
+
+  <div id="specs">
+    <h2>2. Технические спецификации оборудования</h2>
+    <p>Аппаратная часть проектируется с учетом интеграции следующих компонентов:</p>
+    <ul>
+      <li><strong>Вычислительный модуль:</strong> Интегрированное решение на базе архитектуры ARM (Raspberry Pi Zero 2 W).</li>
+      <li><strong>Дисплей:</strong> Цветная IPS-матрица (5 дюймов) с интерфейсом передачи данных HDMI.</li>
+      <li><strong>Подсистема ввода:</strong> Аналоговые манипуляторы, тактовые кнопки направлений и действий, интегрированные через АЦП-конвертеры.</li>
+      <li><strong>Модули расширения:</strong> Встроенный считыватель MicroSD для пользовательских данных и разъем 3.5 мм для вывода аудиосигнала.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div id="dev">
+    <h2>3. Программная архитектура</h2>
+    <p>Разработка операционной системы будет осуществляться в соответствии со следующими техническими стандартами:</p>
+    <ul>
+      <li><strong>Базовое ядро:</strong> Оптимизированная минималистичная сборка ядра ОС Linux для обеспечения высокой скорости инициализации аппаратных компонентов.</li>
+      <li><strong>Графическая среда:</strong> Проектирование визуального интерфейса с использованием языка C++ и графической библиотеки Raylib.</li>
+      <li><strong>Сетевая инфраструктура:</strong> Реализация клиент-серверного взаимодействия для цифрового магазина (HTML, CSS, Node.js) с поддержкой беспроводной передачи данных.</li>
+    </ul>
+  </div>
+
+  <div class="author-section" id="author">
+    <h2>4. Информация об авторе</h2>
+    <p><strong>Главный проектировщик:</strong> Василэй (@Kivasily)</p>
+    <p>Начинающий разработчик, в сферу интересов входит изучение Биологии, Фармакологии, а также английского и японского языков. Самостоятельно изучает HTML, JS и C ++.</p>
+    <p>В свободное от разработки время предпочитает такие видеоигры, как Genshin Impact, Minecraft, Stardew Valley и Skyrim, а также увлекается японской анимацией ("Монолог Фармацевта", "Бездомный Бог", "Хоримия", "Твое Имя", "Форма Голоса").</p>
+    
+    <br>
+    <p><strong>Контактные данные:</strong></p>
+    <ul>
+      <li>Discord: <a class="link" href="https://discord.com/users/1187986753211076631/">@Kivasily</a></li>
+      <li>GitHub: <a class="link" href="https://github.com/kivasily">github.com/Kivasily</a></li>
+      <li>E-mail: <a class="link" href="mailto:vasilyrobottt@gmail.com">vasilyrobottt@gmail.com</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
